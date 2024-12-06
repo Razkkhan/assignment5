@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       input.value = "";
 
-      alert("Donation successful!");
+      alert("Your Donation is successful!");
     });
   });
 });
