@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gwendolyn:wght@400;700&family=Lexend:wght@100..900&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-family">
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="blog.html" class="nav-btn" id="blog-btn">Blog</a>
+        </div>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Donate Icon" class="logo-icon">
+            <p>Donate Bangladesh</p>
+        </div>
+        <div class="nav-right">
+            <span class="balance">
+                <img src="assets/coin.png" alt="coin icon" class="coin-icon"> 5500 BDT
+            </span>
+        </div>
+    </div>
+
+
+    <div class="buttons">
+        <button class="tab-btn active" id="donation-btn">Donation</button>
+        <button class="tab-btn" id="history-btn">History</button>
+    </div>
+
+    <div class="content">
+        <!-- Donation Section -->
+        <section id="donation-section">
+            <div class="donation-card">
+                <img src="assets/noakhali.png" alt="Flood in Noakhali" class="donation-img">
+                <div class="donation-info">
+                    <h3>Donate for Flood at Noakhali, Bangladesh</h3>
+                    <p>The recent floods in Noakhali have caused significant damage to homes and infrastructure...</p>
+                    <p><strong>Current Donation: </strong><span class="donation-amount">0</span> BDT</p>
+                    <input type="number" placeholder="Write Donation Amount" class="donation-input">
+                    <button class="donate-btn">Donate Now</button>
+                </div>
+            </div>
+            <div class="donation-card">
+                <img src="assets/feni.png" alt="Flood in Feni" class="donation-img">
+                <div class="donation-info">
+                    <h3>Donate for Flood Relief in Feni, Bangladesh</h3>
+                    <p>The recent floods in Feni have devastated local communities, leading to severe disruption...</p>
+                    <p><strong>Current Donation: </strong><span class="donation-amount">600</span> BDT</p>
+                    <input type="number" placeholder="Write Donation Amount" class="donation-input">
+                    <button class="donate-btn">Donate Now</button>
+                </div>
+            </div>
+            <div class="donation-card">
+                <img src="assets/quota-protest.png" alt="Quota Movement" class="donation-img">
+                <div class="donation-info">
+                    <h3>Aid for Injured in the Quota Movement, Bangladesh</h3>
+                    <p>The recent Quota movement has resulted in numerous injuries and significant hardship...</p>
+                    <p><strong>Current Donation: </strong><span class="donation-amount">2400</span> BDT</p>
+                    <input type="number" placeholder="Write Donation Amount" class="donation-input">
+                    <button class="donate-btn">Donate Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history-section" class="hidden">
+            <div class="history-entry">
+                <p>96500 Taka is Donated for famine-2024 at Feni, Bangladesh</p>
+                <p>Date: Tue Sep 17 2024 08:39:11 GMT+0600</p>
+            </div>
+            <div class="history-entry">
+                <p>6500 Taka is Donated for Flood Relief in Feni, Bangladesh</p>
+                <p>Date: Tue Sep 17 2024 08:39:11 GMT+0600</p>
+            </div>
+            <div class="history-entry">
+                <p>15500 Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+                <p>Date: Tue Sep 17 2024 08:39:11 GMT+0600</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
