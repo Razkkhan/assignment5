@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      let balance = parseFloat(balanceElement.textContent.replace(" BDT", ""));
+      let balance = parseFloat(balanceElement.textContent.replace(" BDT", "").trim()); // Get the numeric balance
 
       if (donationAmount > balance) {
         alert("You don't have enough balance for this donation.");
@@ -41,11 +41,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       balance -= donationAmount;
-      balanceElement.textContent = `${balance} BDT`;
+      // Only update the numeric value of the balance, not the coin icon
+      balanceElement.innerHTML = `<img src="assets/coin.png" alt="coin icon" class="coin-icon"> ${balance} BDT`;
 
-      const currentAmount = parseFloat(amountElement.textContent.replace(" BDT", ""));
-      amountElement.textContent = `${currentAmount + donationAmount} BDT`;
+      const currentAmount = parseFloat(amountElement.textContent.replace(" BDT", "").trim());
+      amountElement.innerHTML = `<img src="assets/coin.png" alt=""> ${currentAmount + donationAmount} BDT`; // Add coin icon
 
+      // Add history entry
       const historyEntry = document.createElement("div");
       historyEntry.classList.add("history-entry");
       const date = new Date();

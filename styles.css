@@ -152,7 +152,7 @@ body {
 }
 .donation-amount {
   position: static;
-  width: 110px;
+  width: 130px;
   height: 44px;
   display: flex;
   flex-direction: row;
