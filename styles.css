@@ -162,12 +162,18 @@ body {
   border-radius: 5px;
 }
 
+.donate-input,
+.donate-btn {
+  width: 315px; /* Set the desired width */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
 .donate-btn {
   background-color: #b4f461;
   color: rgb(0, 0, 0);
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
