@@ -82,17 +82,6 @@ body {
   font-weight: bold;
   margin: 0 10px;
 }
-
-.nav-btn {
-  background-color: #b4f461;
-  color: rgb(0, 0, 0);
-  width: 110px;
-  height: 49px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .tab-btn.active {
   background-color: #b4f461;
   width: 157px;
@@ -161,14 +150,36 @@ body {
   border: 1px solid black;
   border-radius: 5px;
 }
-
+.donation-amount {
+  position: static;
+  width: 110px;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px 10px 16px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 16px 0;
+  border-radius: 8px;
+  background: rgba(17, 17, 17, 0.05);
+}
+.donation-amount img {
+  width: 16.25px;
+  height: 16.02px;
+  left: 3.59px;
+  top: 3.71px;
+}
 .donate-input,
 .donate-btn {
-  width: 315px; /* Set the desired width */
+  width: 515px;
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
-  box-sizing: border-box; /* Ensures padding is included in the width */
+  box-sizing: border-box;
 }
 
 .donate-btn {
@@ -180,7 +191,8 @@ body {
 /* History Section */
 .history-entry {
   margin: 15px auto;
-  max-width: 800px;
+  max-width: 1100px;
+  max-height: 900px;
   padding: 15px;
   background: white;
   border-radius: 10px;
@@ -193,7 +205,8 @@ body {
 }
 .footer-blog {
   height: 100px;
-  background-color: #f3f0e9; /* Background color */
-  text-align: center; /* Center text horizontally */
-  line-height: 100px; /* Center text vertically */
+  background-color: #f3f0e9;
+  text-align: center;
+  line-height: 100px;
+  margin-top: 10rem;
 }

@@ -8,13 +8,19 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gwendolyn:wght@400;700&family=Lexend:wght@100..900&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <!-- Navbar -->
     <div class="navbar">
         <div class="nav-left">
-            <a href="index.html" class="nav-btn">Home</a>
+            <a href="index.html"
+                class="bg-[#b4f461] text-black w-[110px] h-[49px] p-[10px_15px] rounded-[5px] cursor-pointer text-center font-bold cursor-pointer">Home</a>
         </div>
         <div class="logo">
             <p>Donate for Bangladesh - Blog</p>
@@ -22,25 +28,70 @@
     </div>
 
     <!-- Blog Content -->
-    <div class="collapse collapse-arrow bg-base-200">
-        <input type="radio" name="my-accordion-2" checked="checked" />
-        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-        <div class="collapse-content">
-            <p>hello</p>
+    <div>
+        <h1 class="font-bold text-4xl ml-5 mt-12">Important FAQ</h1>
+        <div class="collapse collapse-arrow bg-base-200 mt-9">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+                <p>
+                    The DOM is a tree-like structure that represents the HTML or XML document, allowing programming
+                    languages like JavaScript to access and manipulate its content and structure.
+
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="collapse collapse-arrow bg-base-200">
-        <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-        <div class="collapse-content">
-            <p>hello</p>
+        <div class="collapse collapse-arrow bg-base-200 mt-9">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+                <p>To select an element from the DOM, you can use several methods in JavaScript. The most common method
+                    is **`getElementById()`**, which selects an element by its unique ID, like
+                    `document.getElementById('id')`. If you want to select elements by their class name, you can use
+                    **`getElementsByClassName()`**, such as `document.getElementsByClassName('class')`, which returns a
+                    collection of elements with the specified class. For selecting elements by their tag name,
+                    **`getElementsByTagName()`** is used, like `document.getElementsByTagName('tag')`. Additionally,
+                    **`querySelector()`** can be used to select the first matching element based on a CSS selector, like
+                    `document.querySelector('.className')`, and **`querySelectorAll()`** is used to select all elements
+                    that match a given CSS selector, such as `document.querySelectorAll('.className')`.</p>
+            </div>
         </div>
-    </div>
-    <div class="collapse collapse-arrow bg-base-200">
-        <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-        <div class="collapse-content">
-            <p>hello</p>
+        <div class="collapse collapse-arrow bg-base-200 mt-9">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why
+                is it useful?</div>
+            <div class="collapse-content">
+                <p>Event delegation** is a technique in JavaScript where you attach a single event listener to a
+                    parent element to handle events for its child elements. Instead of adding individual event listeners
+                    to each child element, the event bubbles up from the target element to the parent, allowing the
+                    parent to manage the event. This method is particularly useful for dynamically added elements, as
+                    the event listener on the parent will still work for elements that are not present when the page
+                    initially loads.
+
+                    Event delegation is beneficial for several reasons. It improves **performance** by reducing the
+                    number of event listeners attached to elements, which is especially helpful when dealing with a
+                    large number of elements. It also simplifies the handling of **dynamically created content** since
+                    the parent element’s listener can capture events for newly added child elements. Lastly, it makes
+                    the code cleaner and easier to maintain by centralizing the event handling logic.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mt-9">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
+                using the DOM?</div>
+            <div class="collapse-content">
+                <p>To manipulate an element's attributes and styles using the DOM, you can use various JavaScript
+                    methods. For **attributes**, you can retrieve the value of an attribute using
+                    `getAttribute('attributeName')`, set a new value with `setAttribute('attributeName', 'value')`, or
+                    remove an attribute using `removeAttribute('attributeName')`. These methods allow you to interact
+                    with an element's attributes dynamically. For **styles**, you can modify inline styles directly
+                    through the `style` property, such as `element.style.color = 'red'` to change the text color, or
+                    `element.style.fontSize = '20px'` to adjust the font size. Additionally, you can manage CSS classes
+                    by using `classList.add('className')` to add a class, `classList.remove('className')` to remove a
+                    class, or `classList.toggle('className')` to toggle a class based on its current state. These
+                    methods enable you to adjust both the appearance and structure of elements in real time.
+                </p>
+            </div>
         </div>
     </div>
     <footer class="footer-blog">
