@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -20,16 +22,30 @@
     </div>
 
     <!-- Blog Content -->
-    <div class="blog-content">
-        <h1>Blog Questions</h1>
-        <div class="question">
-            <h2>1. What is the Document Object Model (DOM)?</h2>
-            <p>
-                The Document Object Model (DOM) is a programming interface for web documents...
-            </p>
+    <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+        <div class="collapse-content">
+            <p>hello</p>
         </div>
-        <!-- Add questions here -->
     </div>
+    <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+        <div class="collapse-content">
+            <p>hello</p>
+        </div>
+    </div>
+    <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+        <div class="collapse-content">
+            <p>hello</p>
+        </div>
+    </div>
+    <footer class="footer-blog">
+
+    </footer>
 </body>
 
 </html>

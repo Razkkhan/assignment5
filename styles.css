@@ -137,7 +137,7 @@ body {
   display: flex;
   margin: 20px auto;
   padding: 15px;
-  max-width: 900px;
+  max-width: 1100px;
   background: white;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -185,4 +185,15 @@ body {
   background: white;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.footer {
+  height: 100px;
+  width: auto;
+  background-color: #f3f0e9;
+}
+.footer-blog {
+  height: 100px;
+  background-color: #f3f0e9; /* Background color */
+  text-align: center; /* Center text horizontally */
+  line-height: 100px; /* Center text vertically */
 }
