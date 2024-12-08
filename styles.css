@@ -87,7 +87,6 @@ body {
   width: 157px;
   height: 57px;
   flex: none;
-  /* order: 0; */
   flex-grow: 0;
   margin: 0px 16px;
   color: rgb(0, 0, 0);
