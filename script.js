@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const donationBtn = document.getElementById("donation-btn");
   const historyBtn = document.getElementById("history-btn");
 
+  // Toggle sections between Donation and History
   donationBtn.addEventListener("click", function () {
     donationSection.classList.remove("hidden");
     historySection.classList.add("hidden");
@@ -18,8 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
     donationBtn.classList.remove("active");
   });
 
+  // Donation functionality
   const donateButtons = document.querySelectorAll(".donate-btn");
   const balanceElement = document.querySelector(".balance");
+  const modal = document.getElementById("donation-modal");
+  const closeModal = document.getElementById("close-modal");
 
   donateButtons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -40,14 +44,15 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
+      // Deduct balance and update
       balance -= donationAmount;
-      // Only update the numeric value of the balance, not the coin icon
       balanceElement.innerHTML = `<img src="assets/coin.png" alt="coin icon" class="coin-icon"> ${balance} BDT`;
 
+      // Update donation amount on the card
       const currentAmount = parseFloat(amountElement.textContent.replace(" BDT", "").trim());
-      amountElement.innerHTML = `<img src="assets/coin.png" alt=""> ${currentAmount + donationAmount} BDT`; // Add coin icon
+      amountElement.innerHTML = `<img src="assets/coin.png" alt=""> ${currentAmount + donationAmount} BDT`;
 
-      // Add history entry
+      // Add a history entry
       const historyEntry = document.createElement("div");
       historyEntry.classList.add("history-entry");
       const date = new Date();
@@ -57,9 +62,16 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
       historySection.appendChild(historyEntry);
 
+      // Clear input value
       input.value = "";
 
-      alert("Your Donation is successful!");
+      // Show Modal
+      modal.classList.remove("hidden");
     });
+  });
+
+  // Close modal functionality
+  closeModal.addEventListener("click", function () {
+    modal.classList.add("hidden");
   });
 });

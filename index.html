@@ -70,6 +70,23 @@
                     <button class="donate-btn">Donate Now</button>
                 </div>
             </div>
+            <section>
+                <!-- Modal Structure -->
+                <div id="donation-modal"
+                    class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-50">
+                    <div class="bg-white p-6 rounded-lg text-center shadow-xl max-w-md w-full">
+                        <h2 class="text-2xl font-bold">Congrats!</h2>
+                        <img src="assets/coin.png" alt="Coin Icon" class="w-12 h-12 mx-auto my-4">
+                        <p class="text-lg">You Have Donated for Humankind</p>
+                        <p class="text-lg font-semibold">Successfully</p>
+                        <button id="close-modal"
+                            class="mt-4 px-6 py-2 bg-green-400 text-black font-bold rounded hover:bg-green-500">
+                            Close Confirmation
+                        </button>
+                    </div>
+                </div>
+
+            </section>
         </section>
         <!-- History Section -->
         <section id="history-section" class="hidden">
