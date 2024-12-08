@@ -37,14 +37,14 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      let balance = parseFloat(balanceElement.textContent.replace(" BDT", "").trim()); // Get the numeric balance
+      let balance = parseFloat(balanceElement.textContent.replace(" BDT", "").trim()); 
 
       if (donationAmount > balance) {
         alert("You don't have enough balance for this donation.");
         return;
       }
 
-      // Deduct balance and update
+      // balance and update
       balance -= donationAmount;
       balanceElement.innerHTML = `<img src="assets/coin.png" alt="coin icon" class="coin-icon"> ${balance} BDT`;
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const currentAmount = parseFloat(amountElement.textContent.replace(" BDT", "").trim());
       amountElement.innerHTML = `<img src="assets/coin.png" alt=""> ${currentAmount + donationAmount} BDT`;
 
-      // Add a history entry
+      // history entry
       const historyEntry = document.createElement("div");
       historyEntry.classList.add("history-entry");
       const date = new Date();
@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
       historySection.appendChild(historyEntry);
 
-      // Clear input value
       input.value = "";
 
       // Show Modal
@@ -70,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Close modal functionality
+  // modal functionality
   closeModal.addEventListener("click", function () {
     modal.classList.add("hidden");
   });

@@ -5,17 +5,14 @@
   font-weight: 400;
   font-style: normal;
 }
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   background-color: #f9f9f9;
 }
-
 .hidden {
   display: none;
 }
-
 /* Navbar Styling */
 .navbar {
   display: flex;
@@ -30,7 +27,6 @@ body {
   display: flex;
   align-items: center;
 }
-
 .logo {
   color: rgb(17, 17, 17);
   font-size: 20px;
@@ -172,29 +168,26 @@ body {
   left: 3.59px;
   top: 3.71px;
 }
-/* Ensure both input field and donate button have the same width */
 .donate-input,
 .donate-btn {
-  width: 100%; /* Ensure both elements fill the available space equally */
+  width: 100%;
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
   box-sizing: border-box;
 }
-
-/* Optionally add a wrapper for more control */
 .donate-container {
-  width: 100%; /* or a max-width if you'd like */
+  width: 100%;
   display: flex;
-  flex-direction: column; /* Stack the input and button */
-  gap: 10px; /* Space between the input and button */
+  flex-direction: column;
+  gap: 10px;
 }
 
 .donate-btn {
   background-color: #b4f461;
   color: rgb(0, 0, 0);
   cursor: pointer;
-  width: 100%; /* Ensure button spans the full width */
+  width: calc(100% - 20px);
 }
 
 /* History Section */
@@ -221,7 +214,6 @@ body {
 }
 /* General Styles */
 @media (max-width: 768px) {
-  /* Navbar: Adjusting font sizes and spacing for mobile */
   .navbar {
     flex-direction: column;
     padding: 15px;
@@ -282,7 +274,6 @@ body {
     margin: 0 auto;
   }
 
-  /* Adjusting History Section */
   .history-entry {
     padding: 10px;
     margin: 10px auto;
@@ -295,7 +286,6 @@ body {
   }
 }
 
-/* Further responsiveness for very small screens */
 @media (max-width: 480px) {
   .logo {
     font-size: 16px;
@@ -307,8 +297,9 @@ body {
   }
 
   .donation-btn,
+  .donate-btn,
   .history-btn {
-    width: 100%;
+    width: 50%;
     padding: 12px;
     font-size: 14px;
   }
