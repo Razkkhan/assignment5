@@ -172,20 +172,31 @@ body {
   left: 3.59px;
   top: 3.71px;
 }
+/* Ensure both input field and donate button have the same width */
 .donate-input,
 .donate-btn {
-  width: 515px;
+  width: 100%; /* Ensure both elements fill the available space equally */
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
   box-sizing: border-box;
 }
 
+/* Optionally add a wrapper for more control */
+.donate-container {
+  width: 100%; /* or a max-width if you'd like */
+  display: flex;
+  flex-direction: column; /* Stack the input and button */
+  gap: 10px; /* Space between the input and button */
+}
+
 .donate-btn {
   background-color: #b4f461;
   color: rgb(0, 0, 0);
   cursor: pointer;
+  width: 100%; /* Ensure button spans the full width */
 }
+
 /* History Section */
 .history-entry {
   margin: 15px auto;
@@ -207,4 +218,108 @@ body {
   text-align: center;
   line-height: 100px;
   margin-top: 10rem;
+}
+/* General Styles */
+@media (max-width: 768px) {
+  /* Navbar: Adjusting font sizes and spacing for mobile */
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-btn {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .balance {
+    font-size: 14px;
+  }
+
+  /* Buttons */
+  .tab-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .tab-btn.active {
+    width: 130px;
+  }
+
+  #donation-btn,
+  #history-btn,
+  #donation-btn {
+    width: 50%;
+    margin: 10px 10px;
+  }
+
+  /* Donation Card */
+  .donation-card {
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 90%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .donation-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .donation-info {
+    margin-left: 0;
+  }
+
+  /* Modal */
+  #donation-modal {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Adjusting History Section */
+  .history-entry {
+    padding: 10px;
+    margin: 10px auto;
+    width: 95%;
+  }
+
+  /* Footer */
+  .footer-blog {
+    font-size: 14px;
+  }
+}
+
+/* Further responsiveness for very small screens */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 16px;
+  }
+
+  .tab-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .donation-btn,
+  .history-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .balance {
+    font-size: 12px;
+  }
+
+  /* History Section */
+  .history-entry {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
